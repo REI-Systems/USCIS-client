@@ -10,7 +10,8 @@
 angular.module('contactsApp')
   .controller('ContactaddCtrl', ['$scope', 'mainFactory', function ($scope, mainFactory) {
 
-    $scope.submit = function(contact) {
-      mainFactory.addContact(contact);
+    $scope.submit = function() {
+      var newContact = angular.copy($scope.contact);
+      mainFactory.addContact(newContact);
     };
   }]);

@@ -12,17 +12,15 @@ angular.module('contactsApp')
     // Service logic
     // ...
 
-    var contacts = [];
+    var factoryContacts = [];
 
     // Public API here
     return {
       getContacts: function () {
-        return contacts;
+        return factoryContacts;
       },
-      addContact: function(contact) {
-        console.log('Added contact');
-        console.log(contact);
-        contacts.concat(contact);
+      addContact: function(newContact) {
+        factoryContacts.push(newContact);
       }
     };
   });
