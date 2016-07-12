@@ -59,6 +59,11 @@ body {
   margin-top: 28px;
 }
 
+.navbar-default{
+  background-color: transparent !important;
+  border: 0px !important;
+  float:right !important;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {

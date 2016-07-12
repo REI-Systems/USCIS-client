@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="styles/uscismain.css">
     <!-- endbuild -->
   </head>
   <body ng-app="contactsApp">
@@ -21,8 +22,51 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
+    <div class="uscis-header">
+
+  <div class="top-header-bar">
+    <div class="wrapper margin-tablet-and-down">
+      <div class="col-span-8 dhs-website">
+        <img src="images/small-flag.png" class="flag" alt="American flag">
+        Official website of the Department of Homeland Security
+        <span class="skip-link hidden-tablet-and-down">
+          <a class="no-underline" href="#maincontent" id="skip-nav">Skip to main content</a>
+        </span>
+      </div>
+      <div class="col-span-4 a-right hidden-mobile">
+        <span class="login"></span>
+        <a href="http://www.uscis.gov/" target="_blank" id="uscis_link" class="with-padding-left-45 no-underline ">Go to uscis.gov</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-header-bar">
+    <div class="wrapper margin-tablet-and-down">
+      <div class="uscis-row">
+
+        <div class="col-span-1 uscis-logo">
+          <div class="no-underline no-sub-menu">
+          <img src="images/DHS_seal_high_res.png" alt="Department of Homeland Security seal">
+          </div>
+        </div>
+        <div class="col-span-2 uscis-text ">
+          <div class="uscis-row">
+            <div class="uscis-text-wrapper">
+              <a class="no-underline no-sub-menu" href="/" id="anch_2">U.S. Citizenship and Immigration Services</a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-span-3 uscis-mobile-menu hidden-tablet-and-up">
+          <button id="toggle-sections" title="open menu" class="x lines-button close-side-menu" type="button"><span class="lines"></span></button>
+        </div>
+
+        <div class="links col-span-8 a-right f-right uscis-mobile-side-menu">
+
+               <div class="navbar navbar-default" role="navigation">
+        <div class="wrapper">
           <div class="navbar-header">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -32,7 +76,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">contacts</a>
+ 
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -45,17 +89,91 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+          <div class="mobile-sign-in-up-out">
+            
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+
+ 
+    </div>
+  <div class="wrapper appointment">
+<div class="appointment-new base-card">
+        <div class="appointment-inner "> 
+
+  
+    <div ng-view=""></div>
+    </div>
+</div>
+</div>
+   <div class="" id="footer">
+
+  <div class="footer-bar-gradiant"></div>
+  <div class="wrapper margin-tablet-and-down">
+    <div class="logo">
+        <img src="images/dhs-seal-footer.png" alt="U.S. department of homeland security seal U.S. citizenship and immigration services">
+    </div>
+
+    <div class="icons">
+      <a title="USCIS on Facebook" target="_blank" href="http://www.facebook.com/uscis" id="anch_26"><i class="fa fa-facebook"></i></a>
+      <a title="USCIS on Twitter" target="_blank" href="http://www.twitter.com/uscis" id="anch_27"><i class="fa fa-twitter"></i></a>
+      <a title="USCIS on YouTube" target="_blank" href="http://www.youtube.com/uscis" id="anch_28"><i class="fa fa-youtube"></i></a>
+      <a title="USCIS RSS Feeds" target="_blank" href="http://www.uscis.gov/rss-landing" id="anch_29"><i class="fa fa-rss"></i></a>
+    </div>
+
+    <div class="links">
+      <div class="link-col">
+        <h3 id="topics" class="title">TOPICS <span class="hidden-desktop fa fa-plus"></span></h3>
+        <div id="topics-ctr" class="sub-links">
+          <a title="Adoption" target="_blank" href="http://www.uscis.gov/adoption" id="anch_30">Adoption</a>
+          
+        </div>
+      </div>
+      <div class="link-col">
+        <h3 id="title" class="title">VERIFICATION <span class="hidden-desktop fa fa-plus"></span></h3>
+        <div id="title-ctr" class="sub-links">
+          <a title="E-Verify " target="_blank" href="http://www.uscis.gov/e-verify" id="anch_44">E-Verify </a>
+          
+        </div>
+      </div>
+      <div class="link-col">
+        <h3 id="policies" class="title">POLICIES <span class="hidden-desktop fa fa-plus"></span></h3>
+        <div id="policies-ctr" class="sub-links">
+          <a target="_blank" title="USCIS Freedom of Information Act and Privacy Act" href="http://www.uscis.gov/about-us/freedom-information-and-privacy-act-foia/uscis-freedom-information-act-and-privacy-act" id="anch_48">USCIS Freedom of Information Act and Privacy Act</a>
+          <a title="No FEAR Act" target="_blank" href="http://www.uscis.gov/no-fear-act/equal-employment-opportunity-data-posted-pursuant-no-fear-act" id="anch_49">No FEAR Act</a>
+          <a title="Website Policies" target="_blank" href="http://www.uscis.gov/website-policies" id="anch_50">Website Policies</a>
+          <a title="Accessibility" target="_blank" href="http://www.uscis.gov/accessibility" id="anch_51">Accessibility</a>
+          <a target="_blank" title="Social Media Policy" href="http://www.uscis.gov/social-media/social-media-policy" id="anch_52">Social Media Policy</a>
+          <a target="_blank" title="Plug-ins" href="http://www.uscis.gov/website-policies/plug-ins" id="anch_53">Plug-ins</a>
+          <a title="Adobe Reader" target="_blank" href="http://www.adobe.com/reader" id="anch_54">Adobe Reader</a>
+        </div>
+      </div>
+      <div class="link-col">
+        <h3 id="government" class="title">GOVERNMENT <span class="hidden-desktop fa fa-plus"></span></h3>
+        <div id="government-ctr" class="sub-links">
+          
+          <a title="White House" target="_blank" href="http://www.whitehouse.gov" id="anch_60">White House</a>
+          <a title="U.S. Department of State" target="_blank" href="http://www.state.gov" id="anch_61">U.S. Department of State</a>
+          <a title="USA.gov" target="_blank" href="http://www.usa.gov" id="anch_62">USA.gov</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="contacts">
+      <div>National Customer Service Center</div>
+      <div>1-800-375-5283</div>
+      <div style="margin-top: 15px">TDD for the Hearing Impaired</div>
+      <div>1-800-767-1833</div>
+    </div>
+  </div>
+</div>
+
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
