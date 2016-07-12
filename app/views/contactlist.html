@@ -1,1 +1,13 @@
 <p>This is the contactList view.</p>
+<table>
+  <th>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone</td>
+  </th>
+  <tr ng-repeat="contact in contacts">
+    <td>{{ contact.name }}</td>
+    <td>{{ contact.email}}</td>
+    <td>{{ contact.phone}}</td>
+  </tr>
+</table>
