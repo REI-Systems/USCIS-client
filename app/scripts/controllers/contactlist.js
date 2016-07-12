@@ -8,10 +8,9 @@
  * Controller of the contactsApp
  */
 angular.module('contactsApp')
-  .controller('ContactlistCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('ContactlistCtrl', ['$scope', 'mainFactory', function ($scope, mainFactory) {
+
+    var factoryContacts = mainFactory.getContacts();
+    $scope.contacts = factoryContacts;
+
+  }]);

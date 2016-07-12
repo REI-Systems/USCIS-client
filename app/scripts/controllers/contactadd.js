@@ -8,10 +8,10 @@
  * Controller of the contactsApp
  */
 angular.module('contactsApp')
-  .controller('ContactaddCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('ContactaddCtrl', ['$scope', 'mainFactory', function ($scope, mainFactory) {
+
+    $scope.submit = function() {
+      var newContact = angular.copy($scope.contact);
+      mainFactory.addContact(newContact);
+    };
+  }]);
