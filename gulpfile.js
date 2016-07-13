@@ -68,7 +68,7 @@ gulp.task('clean:tmp', function (cb) {
 });
 
 gulp.task('start:client', ['start:server', 'styles'], function () {
-  openURL('http://localhost:9000');
+  openURL('http://localhost:9000/#/home');
 });
 
 gulp.task('start:server', function() {
