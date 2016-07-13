@@ -5,9 +5,9 @@
     <th>Email</th>
     <th>Phone</th>
   </tr>
-  <tr ng-repeat="contact in contacts">
-    <td>{{ contact.name }}</td>
-    <td>{{ contact.email}}</td>
-    <td>{{ contact.phone}}</td>
+  <tr id="contactRow{{$index}}" ng-repeat="contact in contacts">
+      <td id="contactName{{$index}}">{{ contact.name }}</td>
+      <td id="contactEmail{{$index}}">{{ contact.email}}</td>
+      <td id="contactPhone{{$index}}">{{ contact.phone}}</td>
   </tr>
 </table>
