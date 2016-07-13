@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="tests.Bing_HomePageTests">
+        <methods>
+          <include name="Can_Perform_Search"/>
+          <include name="closeDriver"/>
+          <include name="Can_Navigate_To_Bing_Home_Page"/>
+        </methods>
+      </class> <!-- tests.Bing_HomePageTests -->
+      <class name="tests.Google_HomePageTests">
+        <methods>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- tests.Google_HomePageTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
