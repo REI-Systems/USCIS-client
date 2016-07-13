@@ -79,15 +79,13 @@
  
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="NavigationCtrl">
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-          
-            
-              <li><a ng-href="#/contactList">Contacts List</a></li>
-              <li><a ng-href="#/contactAdd">Add Contact</a></li>
+            <ul class="nav navbar-nav"  >
+              <li ng-class="{active: isActive('/home')}"><a href="#/home">Home</a></li>
+              <li ng-class="{active: isActive('/about')}"><a href="#/about">About</a></li>
+              <li ng-class="{active: isActive('/contactList')}"><a href="#/contactList">Contacts List</a></li>
+              <li ng-class="{active: isActive('/contactAdd')}"><a href="#/contactAdd">Add Contact</a></li>
             </ul>
           </div>
         </div>
@@ -197,6 +195,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/navigation.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/contactlist.js"></script>
