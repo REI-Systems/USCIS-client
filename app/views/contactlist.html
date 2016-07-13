@@ -1,13 +1,17 @@
-<p>This is the contactList view.</p>
-<table>
+
+<table class="table-borderless" summary="Table summary">
+  <thead>
   <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Phone</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Phone</th>
   </tr>
+  </thead>
+  <tbody>
   <tr id="contactRow{{$index}}" ng-repeat="contact in contacts">
-      <td id="contactName{{$index}}">{{ contact.name }}</td>
-      <td id="contactEmail{{$index}}">{{ contact.email}}</td>
-      <td id="contactPhone{{$index}}">{{ contact.phone}}</td>
+    <td id="contactName{{$index}}" title="Name">{{contact.name}}</td>
+    <td id="contactEmail{{$index}}" title="Email">{{contact.email}}</td>
+    <td id="contactPhone{{$index}}" title="Phone">{{contact.phone}}</td>
   </tr>
+  </tbody>
 </table>
