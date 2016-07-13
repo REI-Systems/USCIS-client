@@ -1,13 +1,13 @@
     <h2 lang="en">Contact List</h2>
 <table>
-  <th>
-    <td>Name</td>
-    <td>Email</td>
-    <td>Phone</td>
-  </th>
-  <tr ng-repeat="contact in contacts">
-    <td>{{ contact.name }}</td>
-    <td>{{ contact.email}}</td>
-    <td>{{ contact.phone}}</td>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+  <tr id="contactRow{{$index}}" ng-repeat="contact in contacts">
+      <td id="contactName{{$index}}">{{ contact.name }}</td>
+      <td id="contactEmail{{$index}}">{{ contact.email}}</td>
+      <td id="contactPhone{{$index}}">{{ contact.phone}}</td>
   </tr>
 </table>
