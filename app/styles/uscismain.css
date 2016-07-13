@@ -1,15 +1,4 @@
 ﻿@charset "UTF-8";
-/*!
- *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-@font-face {
-	font-family: 'FontAwesome';
-  src: url(/appointment/assets/fontawesome-webfont-d4f5a99224154f2a808e42a441ddc9248ffe78b7a4083684ce159270b30b912a.eot?v=4.4.0);
-  src: url(/appointment/assets/fontawesome-webfont-d4f5a99224154f2a808e42a441ddc9248ffe78b7a4083684ce159270b30b912a.eot?#iefix&v=4.4.0) format("embedded-opentype"), url(/appointment/assets/fontawesome-webfont-3c4a1bb7ce3234407184f0d80cc4dec075e4ad616b44dcc5778e1cfb1bc24019.woff2?v=4.4.0) format("woff2"), url(/appointment/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff?v=4.4.0) format("woff"), url(/appointment/assets/fontawesome-webfont-1b7f3de49d68b01f415574ebb82e6110a1d09cda2071ad8451bdb5124131a292.ttf?v=4.4.0) format("truetype"), url(/appointment/assets/fontawesome-webfont-7414288c272f6cc10304aa18e89bf24fb30f40afd644623f425c2c3d71fbe06a.svg?v=4.4.0#fontawesomeregular) format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 
 .fa {
 	display: inline-block;
@@ -3746,27 +3735,6 @@ body.stop-scrolling {
 	}
 }
 
-@font-face {
-	font-family: "ProximaNovaSemibold";
-  font-style: normal;
-  font-weight: normal;
-  src: url(/appointment/assets/ProximaNova-Sbold-webfont-29dbb99dc1571e0f3c7718a4e2c1862ef1e89f450f11a78502404247408f7b6e.eot?#iefix) format("embedded-opentype"), url(/appointment/assets/ProximaNova-Sbold-webfont-cdfad3923e63ec744a8ff847cfa7a61f5da721a5d0765e84c9e629abe570bb30.woff) format("woff"), url(/appointment/assets/ProximaNova-Sbold-webfont-498292f40d01dfc457b67db3bfdbb5655b408543939b40ad58625da09e3d07e6.ttf) format("truetype"), url(/appointment/assets/ProximaNova-Sbold-webfont-1613745e456efea0d95040da8aaa21592abf348152af31adb2fab006884c9aca.svg#ProximaNovaSemibold) format("svg");
-}
-
-@font-face {
-	font-family: "ProximaNovaRegular";
-  font-style: normal;
-  font-weight: normal;
-  src: url(/appointment/assets/ProximaNova-Reg-webfont-6b86c2b8077e3ebd8fa30347571369b6324ef43512b1883d19c0db3d03765baa.eot?#iefix) format("embedded-opentype"), url(/appointment/assets/ProximaNova-Reg-webfont-8229ebc323cac6583044ec8b720d29492cf56e72298803cab75d3ac460ca3d32.woff) format("woff"), url(/appointment/assets/ProximaNova-Reg-webfont-2bca6604bb677a0b4a89528beaa66f3063d97da3031204dc7a024c6b7ddfd70b.ttf) format("truetype"), url(/appointment/assets/ProximaNova-Reg-webfont-0e08c269470a5ffadbec1842e549f776f9501ddd337f83276fc1fcdbaf7cd798.svg#ProximaNovaRegular) format("svg");
-}
-
-@font-face {
-	font-family: "ProximaNovaLight";
-  font-style: normal;
-  font-weight: normal;
-  src: url(/appointment/assets/ProximaNova-Light-webfont-8b8f829e55633c317a95de8fba2b01490766b4348e43ec161d324749f88a6758.eot?#iefix) format("embedded-opentype"), url(/appointment/assets/ProximaNova-Light-webfont-f4dce20122d5d7ca1ec208ea2e25c7adf1603cb46b541a5600c489fbd8d57bae.woff) format("woff"), url(/appointment/assets/ProximaNova-Light-webfont-cef3c5677715bfb25b4de28df6dfda5f70eb5a064f909e44d341984456ef89cb.ttf) format("truetype"), url(/appointment/assets/ProximaNova-Light-webfont-e36a354e5674394de4e96d5e3871e468d74ecc8f5bf713da42640c3e107e776e.svg#ProximaNovaLight) format("svg");
-}
-
 * {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -7344,9 +7312,6 @@ label b {
 	padding: 60px;
 }
 
-.uscis-panel.with-logo {
-	background: #fff url(/appointment/assets/bird-logo-corner-3e4f5b4cc1a167a2c251b353ff1d2e00ae4f5738c6f2503995bfde1059c10c10.png) no-repeat top right;
-}
 
 @media screen and (max-width: 600px) {
 	.uscis-panel.with-logo {
@@ -7934,9 +7899,9 @@ table p {
 	margin: 0;
 }
 
-table tr:first-child td p, table tr:first-child td, table tr:first-child th {
-	font-family: ProximaNovaSemibold, "Arial Bold", "Arial Black", Arial;
-	font-weight: normal;
+table th {
+  font-family: "Arial Bold", "Arial Black", Arial;
+  font-weight: normal;
 }
 
 table tr:first-child td p b, table tr:first-child td b, table tr:first-child th b {

@@ -39,6 +39,11 @@ angular
         controller: 'ContactaddCtrl',
         controllerAs: 'contactAdd'
       })
+      .when('/formtest', {
+        templateUrl: 'views/formtest.html',
+        controller: 'FormtestCtrl',
+        controllerAs: 'formtest'
+      })
       .otherwise({
         redirectTo: '/'
       });

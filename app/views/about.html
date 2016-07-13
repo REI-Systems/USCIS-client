@@ -1,3 +1,23 @@
 <div class="manage-section with-padding-bottom-30">
     <h2 lang="en">About</h2>
-    </div>
+
+  <table class="table-borderless" summary="Table summary">
+    <thead>
+    <tr>
+      <th scope="col">User ID</th>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="contactRow{{$index}}" ng-repeat="post in posts">
+      <td title="User ID">{{ post.userid}}</td>
+      <td title="ID">{{ post.id}}</td>
+      <td title="Title">{{ post.title}}</td>
+      <td title="Body">{{ post.body}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
