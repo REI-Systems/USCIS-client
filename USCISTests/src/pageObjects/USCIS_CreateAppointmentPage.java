@@ -18,7 +18,7 @@ public class USCIS_CreateAppointmentPage {
 	}
 	
 	public Boolean isAt(){
-		WebElement dropDown = driver.findElement(By.id("userSubType"));
+		WebElement dropDown = driver.findElement(By.id("locationselect"));
 		return dropDown.isDisplayed();
 	}
 }
