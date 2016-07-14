@@ -1,8 +1,12 @@
 package core;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 /*
  * The driver class is responsible for handling the Selenium driver, which drives the browser.
@@ -15,8 +19,14 @@ public class Driver {
 	 * Creates a new instance of WebDriver and returns it.
 	 */
 	public static WebDriver createDriver(){
-		//DesiredCapabilities caps = DesiredCapabilities.firefox();
-		//driver = new RemoteWebDriver(new URL("jenkins-uscis.reisys.io:4444/wd/hub"),caps);
+		/*DesiredCapabilities caps = DesiredCapabilities.firefox();
+		
+		try {
+			driver = new RemoteWebDriver(new URL("jenkins-uscis.reisys.io:4444/wd/hub"),caps);
+		} 
+		catch (MalformedURLException e) {
+			e.printStackTrace();
+		}*/
 		
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
