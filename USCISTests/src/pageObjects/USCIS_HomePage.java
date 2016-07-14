@@ -28,8 +28,9 @@ public class USCIS_HomePage {
 	 * Verifies that the browser is currently on the USCIS_HomePage.
 	 */
 	public Boolean isAt(){
-		String expected = "Manage an Appointment";
-		String pageTitle = driver.findElement(By.tagName("h2")).getText();
-		return expected.equals(pageTitle);
+		String expected = "";
+		WebElement button = driver.findElement(By.tagName("button"));
+		String buttonText = button.getText();
+		return expected.equals(buttonText);
 	}
 }
