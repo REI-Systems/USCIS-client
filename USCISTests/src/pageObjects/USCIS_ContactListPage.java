@@ -24,10 +24,6 @@ public class USCIS_ContactListPage {
 	 * Verifies that the browser is currently on the USCIS_ContactListPage.
 	 */
 	public Boolean isAt(){
-		/*String windowTitle = driver.getTitle();
-		String expected = "contactList";
-		return windowTitle.contains(expected);*/
-		
 		String pageTitle = driver.findElement(By.tagName("h2")).getText();
 		String expected = "Contact List";
 		return expected.equals(pageTitle);
