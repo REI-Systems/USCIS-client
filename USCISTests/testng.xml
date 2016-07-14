@@ -3,10 +3,8 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="tests.USCIS_AboutPageTests"/>
-      <class name="tests.USCIS_AddContactPageTests"/>
-      <class name="tests.USCIS_ContactListPageTests"/>
       <class name="tests.USCIS_HomePageTests"/>
+      <class name="tests.USCIS_CreateAppointmentPageTests" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,5 +1,22 @@
 <div class="manage-section with-padding-bottom-30">
-  <button lang="en" class="uscis-button col-span-12 mobile-full right-to-left uscis-button-blue" ng-click="navigate('/createAppointment')">Create New Appointment</button><br /><br />
-  <button lang="en" class="uscis-button col-span-12 mobile-full right-to-left uscis-button-blue" ng-click="navigate('/createAppointment')">Manage Appointment</button>
+
+  <div class="appointment-header text-center with-padding-top-30">
+    <img alt="Citizenship - Schedule an Appointment" src="images/citizenshiplogo.png">
+  </div>
+  <div class="uscis-row with-padding-bottom-30 make-appointment-selection with-padding-top-60">
+
+    <a href="" class="uscis-button-secondary-blue mobile-no-shift mobile-full region-button col-span-4 col-offset-2"
+       ng-click="navigate('/createAppointment')" id="create-button" lang="en">
+      Make New Appointment
+    </a>
+
+    <a href="#" class="uscis-button-secondary-blue mobile-full region-button col-span-4" id="manage-button"
+       ng-click="navigate('/createAppointment')">
+      Manage An Appointment
+    </a>
+    <div class="uscis-row with-padding-bottom-30 make-appointment-selection with-padding-top-60 with-padding-left-60" style="padding-left: 100px !important; color:#666666 !important">Click on "Manage an appointment" button, if you would like to reprint or change your appointment.
+
+    </div>
+  </div>
 </div>
 `

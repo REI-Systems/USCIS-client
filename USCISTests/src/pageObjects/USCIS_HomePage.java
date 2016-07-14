@@ -18,8 +18,8 @@ public class USCIS_HomePage {
 	 * Access the home page.
 	 */
 	public void navigateTo(){
-		String url = "http://localhost:9000";
-		//String url = System.getenv("baseURL");
+		//String url = "http://localhost:9000";
+		String url = System.getenv("baseURL");
 		driver.get(url);
 		driver.findElement(By.partialLinkText("Home")).click();
 	}
@@ -28,8 +28,9 @@ public class USCIS_HomePage {
 	 * Verifies that the browser is currently on the USCIS_HomePage.
 	 */
 	public Boolean isAt(){
-		String expected = "Manage an Appointment";
-		String pageTitle = driver.findElement(By.tagName("h2")).getText();
-		return expected.equals(pageTitle);
+		String expected = "Make New Appointment";
+		WebElement button = driver.findElement(By.id("create-button"));
+		String buttonText = button.getText();
+		return expected.equals(buttonText);
 	}
 }

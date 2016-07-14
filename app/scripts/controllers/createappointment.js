@@ -26,4 +26,5 @@ angular.module('contactsApp')
 
 
     $scope.timeslots = mainFactory.getTimeslots();
+    $scope.locations = mainFactory.getLocations();
   }]);

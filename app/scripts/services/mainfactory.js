@@ -34,6 +34,25 @@ angular.module('contactsApp')
       }
     ];
 
+    var locations = [
+      {
+        id:0,
+        desc:'BOS - 123 Main St, Boston, MA'
+      },
+      {
+        id:1,
+        desc:'NYC - 123 Times Sq, New York, NY'
+      },
+      {
+        id:2,
+        desc:'DCA - 111 Massachusetts Ave, Washington, DC'
+      },
+      {
+        id:3,
+        desc:'ATL - 123 Peach Rd, Atlanta, GA'
+      },
+    ]
+
     // Initialize the naviagtion links, defaulting to an applicant role
  //   var navLinks = [
  //     {
@@ -76,6 +95,9 @@ angular.module('contactsApp')
       },
       addContact: function(newContact) {
         factoryContacts.push(newContact);
+      },
+      getLocations: function () {
+        return locations;
       },
       setLocation: function(newAppointmentLocation){
           appointmentLocation = newAppointmentLocation;

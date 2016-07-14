@@ -25,7 +25,6 @@ public class Driver {
 		/*try {
 			driver = new RemoteWebDriver(new URL("jenkins-uscis.reisys.io:4444/wd/hub"), caps);
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
 		

@@ -64,6 +64,11 @@ angular
         controller: 'ChooselocationCtrl',
         controllerAs: 'chooseLocation'
       })
+      .when('/appointmentDetails', {
+        templateUrl: 'views/appointmentdetails.html',
+        controller: 'AppointmentdetailsCtrl',
+        controllerAs: 'appointmentDetails'
+      })
       .otherwise({
         redirectTo: '/'
       });
