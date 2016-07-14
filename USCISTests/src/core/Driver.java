@@ -22,14 +22,14 @@ public class Driver {
 	public static WebDriver createDriver(){
 		DesiredCapabilities caps = DesiredCapabilities.firefox();
 		
-		/*try {
+		try {
 			driver = new RemoteWebDriver(new URL("http://jenkins-uscis.reisys.io:4444/wd/hub"), caps);
 		} 
 		catch (MalformedURLException e) {
 			e.printStackTrace();
-		}*/
+		}
 		
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 	}
