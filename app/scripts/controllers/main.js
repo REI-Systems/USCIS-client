@@ -8,10 +8,9 @@
  * Controller of the contactsApp
  */
 angular.module('contactsApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$location', '$scope', function ($location, $scope) {
+
+    $scope.navigate = function(page) {
+      $location.path(page);
+    }
+  }]);

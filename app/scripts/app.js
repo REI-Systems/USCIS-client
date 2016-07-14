@@ -44,6 +44,26 @@ angular
         controller: 'FormtestCtrl',
         controllerAs: 'formtest'
       })
+      .when('/createAppointment', {
+        templateUrl: 'views/createappointment.html',
+        controller: 'CreateappointmentCtrl',
+        controllerAs: 'createAppointment'
+      })
+      .when('/manageAppointment', {
+        templateUrl: 'views/manageappointment.html',
+        controller: 'ManageappointmentCtrl',
+        controllerAs: 'manageAppointment'
+      })
+      .when('/confirmAppointment', {
+        templateUrl: 'views/confirmappointment.html',
+        controller: 'ConfirmappointmentCtrl',
+        controllerAs: 'confirmAppointment'
+      })
+      .when('/chooseLocation', {
+        templateUrl: 'views/chooselocation.html',
+        controller: 'ChooselocationCtrl',
+        controllerAs: 'chooseLocation'
+      })
       .otherwise({
         redirectTo: '/'
       });

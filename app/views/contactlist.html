@@ -6,10 +6,12 @@
     <th scope="col">Email</th>
     <th scope="col">Phone</th>
   </tr>
+  </thead>
+  <tbody>
   <tr id="contactRow{{$index}}" ng-repeat="contact in contacts">
       <td title="Name" id="contactName{{$index}}">{{ contact.name }}</td>
       <td title="Email" id="contactEmail{{$index}}">{{ contact.email}}</td>
       <td title="Phone" id="contactPhone{{$index}}">{{ contact.phone}}</td>
   </tr>
-  </thead>
+  </tbody>
 </table>
