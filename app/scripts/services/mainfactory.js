@@ -51,7 +51,7 @@ angular.module('contactsApp')
         id:3,
         desc:'ATL - 123 Peach Rd, Atlanta, GA'
       },
-    ]
+    ];
 
     // Initialize the naviagtion links, defaulting to an applicant role
  //   var navLinks = [

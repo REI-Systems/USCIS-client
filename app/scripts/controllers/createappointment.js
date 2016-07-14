@@ -12,6 +12,7 @@ angular.module('contactsApp')
 
       // Do not show the available timeslots when we first arrive at the create appointment page
       $scope.showTimeslots = false;
+    $scope.showCalendar = false;
 
     // Helper function to support ngClick directive from the page. This navigates to the passed in route
     $scope.navigate = function(page) {
@@ -21,9 +22,13 @@ angular.module('contactsApp')
     // When the user selects the location, store the selected location in the factory
     $scope.updateLocation = function() {
       mainFactory.setLocation($scope.appointmentLocation);
-      $scope.showTimeSlots = true;
+      $scope.showCalendar = true;
     };
 
+    $scope.updateDate = function() {
+      //mainFactory.setDate(datePicked);
+      $scope.showTimeSlots = true;
+    };
 
     $scope.timeslots = mainFactory.getTimeslots();
     $scope.locations = mainFactory.getLocations();

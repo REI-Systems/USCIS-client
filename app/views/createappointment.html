@@ -8,50 +8,139 @@
         <label class="uscis-label">Location</label>
       </div>
 
-      <div class="col-sm-12">
-        <div class="width534">
+      <div class="uscis-collection-wrapper uscis-question-wrapper"><select name="location" ng-model="appointmentLocation"
+            id="locationselect" class="select drop-down-box col-span-4">
+        <option ng-repeat="location in locations" value="{{location.id}}">{{location.desc}}</option>
+        </select>
+        <button ng-click="updateLocation()" name="button" type="submit"
+                class="uscis-button-secondary-blue  bottom-button" id="schedule-appointment" lang="en">     See Available Appointments</button></div>
 
 
-
-          <select ng-model="appointmentLocation" name="userSubType" id="userSubType" class="select drop-down-box" title="User type is required">
-
-            <option value="">- Select One</option>
-
-            <option ng-repeat="location in locations" value="{{location.id}}">{{location.desc}}</option>
-            </select>
-
-        </div>
-      </div>
          <br/>
       <br/>
-    
-      <button lang="en" class="uscis-button col-span-4 mobile-full with-margin-right-30 right-to-left rtl-direction"
-              ng-click="updateLocation()">See Available Appointments</button>
-    </div>
-    </div>
-  </div>
 
-<div ng-show="showTimeSlots">
-<h2 lang="en">Available TimeSlots</h2>
-<table class="table-borderless" summary="Table su mmary">
-  <thead>
-  <tr>
-    <th scope="col">Timeslot</th>
-    <th scope="col">Available</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr id="timeslotRow{{$index}}" ng-repeat="timeslot in timeslots">
-    <td title="Timeslot" id="Timeslot{{$index}}">{{ timeslot.title}}</td>
-    <td title="Available" id="available{{$index}}">
-      <div ngIf="{{timeslot.available}}">
-        {{ timeslot.available}}
+
+    </div>
+    </div>
+  <h3  ng-show="showCalendar">Schedule an Appointment</h3>
+  <div ng-show="showCalendar" class="uscis-row with-padding-bottom-30 make-appointment-selection with-padding-top-60">
+    <div class="calendar-header uscis-row with-padding-top-30 with-padding-bottom-30 with-margin-bottom-30 with-border-bottom with-border-top   ">
+      <button name="last_week" type="submit" class="col-span-2 a-left week-button uscis-button-clear no-underline right-to-left rtl-direction" id="last_week" data-type="last" lang="en" disabled="disabled">
+        <img src="images/previousweek.png" alt="Previous Week">Previous week
+      </button>    <label class="hidden-mobile a-center mobile-full col-span-8 month-name blue-text right-to-left">Jul 2016</label>
+      <button name="next_week" type="submit" class="text-right uscis-button-clear week-button no-underline col-span-2 right-to-left rtl-direction" id="next_week" data-type="next" lang="en">
+        Next week   <img src="images/nextweek.png" alt="Next Week">
+      </button>  </div>
+    <div ng-show="showCalendar" class="uscis-row">
+      <div class="col-offset-1 mobile-no-shift col-span-10 mobile-full months">
+        <div class="dates">
+          <div class="uscis-row week" style="" id="0">
+            <div class="day-wrapper right-to-left" style="width: 12.5%">
+              <div class="day-of-week with-margin-bottom-15 with-margin-top-15">Sun</div>
+              <button ng-click="updateDate()" class="day no-appointments" tabindex="-1">
+                <div class="day-num">17</div>
+                <div class="full-date" style="display: none">07/17/2016</div>
+              </button>
+            </div>
+            <div class="day-wrapper right-to-left" style="width: 12.5%">
+              <div class="day-of-week with-margin-bottom-15 with-margin-top-15">Mon</div>
+              <button ng-click="updateDate()" class="day no-appointments" tabindex="-1">
+                <div class="day-num">18</div>
+                <div class="full-date" style="display: none">07/18/2016</div>
+              </button>
+            </div>
+            <div class="day-wrapper right-to-left" style="width: 12.5%">
+              <div class="day-of-week with-margin-bottom-15 with-margin-top-15">Tue</div>
+              <button ng-click="updateDate()" class="day has-appointments active" data-type="query-time-slots" data-localized-day="Tuesday">
+                <div class="day-num">19</div>
+                <div class="full-date" style="display: none">07/19/2016</div>
+              </button>
+            </div>
+            <div class="day-wrapper right-to-left" style="width: 12.5%">
+              <div class="day-of-week with-margin-bottom-15 with-margin-top-15">Wed</div>
+              <button ng-click="updateDate()" class="day has-appointments" data-type="query-time-slots" data-localized-day="Wednesday">
+                <div class="day-num">20</div>
+                <div class="full-date" style="display: none">07/20/2016</div>
+              </button>
+            </div>
+            <div class="day-wrapper right-to-left" style="width: 12.5%">
+              <div class="day-of-week with-margin-bottom-15 with-margin-top-15">Thu</div>
+              <button ng-click="updateDate()" class="day no-appointments" tabindex="-1">
+                <div class="day-num">21</div>
+                <div class="full-date" style="display: none">07/21/2016</div>
+              </button>
+            </div>
+            <div class="day-wrapper right-to-left" style="width: 12.5%">
+              <div class="day-of-week with-margin-bottom-15 with-margin-top-15">Fri</div>
+              <button ng-click="updateDate()" class="day no-appointments" tabindex="-1">
+                <div class="day-num">22</div>
+                <div class="full-date" style="display: none">07/22/2016</div>
+              </button>
+            </div>
+            <div class="day-wrapper right-to-left" style="width: 12.5%">
+              <div class="day-of-week with-margin-bottom-15 with-margin-top-15">Sat</div>
+              <button ng-click="updateDate()" class="day no-appointments" tabindex="-1">
+                <div class="day-num">23</div>
+                <div class="full-date" style="display: none">07/23/2016</div>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </td>
-  </tr>
-  </tbody>
-</table>
+    </div>
+    <div ng-show="showCalendar"  class="uscis-row">
+      <div class="times with-margin-top-30">
+        <div class="time-content">
+          <div class="top-part with-border-bottom">
+            <h4 class="with-margin-bottom-15">
+              <span class="translation-for" style="display: inline;">Please select  appointment time for</span>
+              <span id="time-text">Tuesday, July 19th</span>
+            </h4>
+          </div>
+          <div class="appointment-time-slots">
+
+            <div class="time-slots three-per-row">
+
+              <!-- <h3></h3> -->
+
+              <div class="time-slot grid-item with-margin-bottom-15 right-to-left">
+        <span class="time">
+          <form novalidate="novalidate" class="uscis-simple-form slot" action="/en/appointment/save_time" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="ipxtiKA70SVHhv5jwVO3eAwiFn7c5eGnL2L2wvDm9+uocswOsWoG5i9yw4r+T9I2hvaTELmYNBJsM50vKTN4BQ==">
+            <input type="hidden" name="time" id="time" value="08:30 AM">
+            <input type="submit" name="commit" value="08:30 AM" class="uscis-button-clear available-time-slot">
+</form>        </span>
+              </div>
+              <div class="time-slot grid-item with-margin-bottom-15 right-to-left">
+        <span class="time">
+          <form novalidate="novalidate" class="uscis-simple-form slot" action="/en/appointment/save_time" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="TsJ2NhJbydBqvCidpA1tePSXeBYtyCqY8i0NNeHk6x5sLNewAwoeEwJIFXSbEQg2fkP9eEi1/y2xfGbYODFk8A==">
+            <input type="hidden" name="time" id="time" value="08:40 AM">
+            <input type="submit" name="commit" value="08:40 AM" class="uscis-button-clear available-time-slot">
+</form>        </span>
+              </div>
+              <div class="time-slot grid-item with-margin-bottom-15 right-to-left">
+        <span class="time">
+          <form novalidate="novalidate" class="uscis-simple-form slot" action="/en/appointment/save_time" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="G+fWlc/3GHzJwzCBL55RRyDYMMI8A86Aea53bri7ilg5CXcT3qbPv6E3DWgQgjQJqgy1rFl+GzU6/xyDYW4Ftg==">
+            <input type="hidden" name="time" id="time" value="08:50 AM">
+            <input type="submit" name="commit" value="08:50 AM" class="uscis-button-clear available-time-slot">
+</form>        </span>
+              </div>
+              <div class="time-slot grid-item with-margin-bottom-15 right-to-left">
+        <span class="time">
+          <form novalidate="novalidate" class="uscis-simple-form slot" action="/en/appointment/save_time" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="0meX9wGX2HEGdhc+kcGosIuAJ6kztVyWPGWSzSh7BrHwiTZxEMYPsm6CKteu3c3+AVSix1bIiSN/NPkg8a6JXw==">
+            <input type="hidden" name="time" id="time" value="09:00 AM">
+            <input type="submit" name="commit" value="09:00 AM" class="uscis-button-clear available-time-slot">
+</form>        </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 
 
 
+
+
+  </div>
