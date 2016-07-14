@@ -23,8 +23,9 @@ public class Driver {
 		DesiredCapabilities caps = DesiredCapabilities.firefox();
 		
 		/*try {
-			driver = new RemoteWebDriver(new URL("jenkins-uscis.reisys.io:4444/wd/hub"), caps);
-		} catch (MalformedURLException e) {
+			driver = new RemoteWebDriver(new URL("http://jenkins-uscis.reisys.io:4444/wd/hub"), caps);
+		} 
+		catch (MalformedURLException e) {
 			e.printStackTrace();
 		}*/
 		
