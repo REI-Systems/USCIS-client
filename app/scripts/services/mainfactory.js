@@ -14,6 +14,25 @@ angular.module('contactsApp')
 
     var factoryContacts = [];
     var baseUrl = "http://jsonplaceholder.typicode.com/";
+    var appointmentLocation = "";
+    var timeslots = [
+      {
+        title:'9:00-9:30',
+        available:'true'
+      },
+      {
+        title:'9:30-10:00',
+        available:'true'
+      },
+      {
+        title:'10:00-10:30',
+        available:'false'
+      },
+      {
+        title:'10:30-11:00',
+        available:'false'
+      }
+    ];
 
     // Initialize the naviagtion links, defaulting to an applicant role
  //   var navLinks = [
@@ -33,11 +52,11 @@ angular.module('contactsApp')
         link:'#/home'
       },
       {
-        text:'Contact List',
+        text:'About',
         link:'#/contactList'
       },
       {
-        text:'Contact Add',
+        text:'Support',
         link:'#/contactAdd'
       }
     ];
@@ -52,8 +71,14 @@ angular.module('contactsApp')
       getContacts: function () {
         return factoryContacts;
       },
+      getTimeslots: function () {
+        return timeslots;
+      },
       addContact: function(newContact) {
         factoryContacts.push(newContact);
+      },
+      setLocation: function(newAppointmentLocation){
+          appointmentLocation = newAppointmentLocation;
       },
       getPosts: function () {
         var deferred = $q.defer();
