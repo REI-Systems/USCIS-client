@@ -18,8 +18,8 @@ public class USCIS_HomePage {
 	 * Access the home page.
 	 */
 	public void navigateTo(){
-		String url = "http://localhost:9000";
-		//String url = System.getenv("baseURL");
+		//String url = "http://localhost:9000";
+		String url = System.getenv("baseURL");
 		driver.get(url);
 		driver.findElement(By.partialLinkText("Home")).click();
 	}
