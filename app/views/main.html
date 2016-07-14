@@ -1,6 +1,17 @@
 <div class="manage-section with-padding-bottom-30">
 
-
+<datepicker date-day-title="selected year">
+    <input ng-model="date"/>
+</datepicker>
+<datepicker date-format="MM/dd/yy" selector="form-control" width="40px">
+    <div class="input-group">
+        <input class="form-control" placeholder="Choose a date"/>
+        <span class="input-group-addon" style="cursor: pointer">
+        <i class="fa fa-lg fa-calendar"></i>
+        </span>
+    </div>
+</datepicker>
+<input date-time format="yyyy-MM-dd HH:mm">
   <button lang="en" class="uscis-button col-span-12 mobile-full right-to-left uscis-button-blue" ng-click="navigate('/createAppointment')">Create and Appointment</button>
   <h2 lang="en">Manage an Appointment</h2>
   <p lang="en">You will need the PIN number and confirmation number on the appointment letter to change your appointment.</p>

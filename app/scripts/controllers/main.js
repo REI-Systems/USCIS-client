@@ -12,5 +12,5 @@ angular.module('contactsApp')
 
     $scope.navigate = function(page) {
       $location.path(page);
-    }
+    };
   }]);

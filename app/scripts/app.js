@@ -15,7 +15,9 @@ angular
     'ngMessages',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'datePicker',
+      '720kb.datepicker'
   ])
   .config(function ($routeProvider) {
     $routeProvider
