@@ -8,10 +8,10 @@
  * Controller of the contactsApp
  */
 angular.module('contactsApp')
-  .controller('AppointmentdetailsCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('AppointmentdetailsCtrl',[ '$scope', 'mainFactory',function ($scope, mainFactory) {
+
+    $scope.submit = function() {
+//Do Nothing
+    };
+
+  }]);

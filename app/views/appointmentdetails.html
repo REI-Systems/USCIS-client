@@ -1,1 +1,51 @@
-<p>This is the appointmentDetails view.</p>
+
+<h2 lang="en">Confirm Appointment</h2>
+<div class="uscis-row with-border-bottom with-padding-bottom-30">
+  <div class="uscis-row with-margin-bottom-30">
+    <div class="col-span-12  mobile-full flex-vertical-center">
+      <h3 class="col-span-10 mobile-full">Appointment Details</h3>
+
+      <button name="button" type="submit" id="reschedule-appointment" class="uscis-button uscis-button-small right-to-left uscis-button-blue" lang="en"><span>Edit</span></button>
+    </div>
+  </div>
+
+
+  <div class="uscis-row with-margin-top-15">
+    <div class="uscis-row new-appointment-details">
+      <div class="uscis-row">
+
+        <div class="col-span-5 with-padding-right-15 mobile-full with-border-right office-details-header ">
+          <div class="info-header">
+            <h6 class="no-padding" lang="en">Citizenship Office Selected</h6>
+          </div>
+          <div class="info-content">
+            <p class="no-margin office-name">Boston Office</p>
+            <p class="no-margin"> 123 Main Street<br>Boston, MA 12345</p>
+          </div>
+        </div>
+        <div class="col-span-3 with-border-right with-padding-left-30 details-date-time">
+          <div class="info-header">
+            <h6 class="no-padding" lang="en">Date</h6>
+          </div>
+          <p class="no-margin info-content">07/19/2016</p>
+        </div>
+        <div class="col-span-3 with-padding-left-30 details-date-time">
+          <div class="info-header">
+            <h6 class="no-padding" lang="en">Time</h6>
+          </div>
+          <p class="no-margin info-content">08:30 AM</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<form>
+  First Name: <input id="contactNameField" type="text" ng-model="contact.firstname" maxlength="50"/><br />
+  Last Name: <input id="contactNameField" type="text" ng-model="contact.lastname" maxlength="50"/><br />
+  E-mail: <input id="contactEmailField" type="email" ng-model="contact.email" /><br />
+  Phone: <input id="contactPhoneField" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" ng-model="contact.phone"/><br />
+
+  <input id="contactSubmitButton" type="submit" ng-click="submit()" value="Confirm" />
+</form>
